@@ -1,10 +1,12 @@
 pipeline {
-  agent any
+  agent {
+    label 'jdk9'
+  }
   stages {
     stage('Say Hello') {
       steps {
         echo 'Hello Charlotte!'
-        sh '''echo Hello World
+        sh '''echo Charlotte!
 '''
       }
     }
